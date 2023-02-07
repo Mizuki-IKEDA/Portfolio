@@ -87,7 +87,7 @@ table {
 }
 
 .animateFadein {
-    animation-duration: 0.5s;
+    animation-duration: 0.75s;
     animation-name: animate-fadein;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -100,7 +100,7 @@ table {
 }
 
 .animateSlideRight {
-    animation-duration: 0.5s;
+    animation-duration: 0.75s;
     animation-name: animate-slide-right;
     animation-fill-mode: both;
     animation-timing-function: ease;
@@ -109,7 +109,7 @@ table {
 }
 
 .animateSlideRightDelay {
-    animation-duration: 0.5s;
+    animation-duration: 0.75s;
     animation-name: animate-slide-right-delay;
     animation-delay: 0.25s;
     animation-fill-mode: both;
@@ -139,7 +139,7 @@ table {
 }
 
 .animateSlideLeft {
-    animation-duration: 0.5s;
+    animation-duration: 0.75s;
     animation-name: animate-slide-left;
     animation-fill-mode: both;
     animation-timing-function: ease;
