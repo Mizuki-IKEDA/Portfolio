@@ -1,0 +1,117 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    
+    &--container {
+        padding: 0 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    &--title {
+        font-size: 3rem;
+        color: var(--aquablue);
+        z-index: 1;
+        opacity: 0;
+    }
+
+    &--projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        z-index: 1;
+        opacity: 0;
+    }
+
+    &--motif {
+        position: absolute;
+        width: 70rem;
+        top: 0rem;
+        left: 0rem;
+        opacity: 0.5;
+
+    }
+
+
+}
+
+.project {
+    position: relative;
+    color: var(--dark);
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    width: 38rem;
+
+    &--image {
+        width: 100%;
+    }
+
+    &--container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);   
+        
+    }
+
+    &--title {
+        transition: 0.5s ease;
+        opacity: 0;
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+        
+
+    }
+
+    &--description {
+        transition: 0.5s ease;
+        opacity: 0;
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        
+    }
+
+    &--link {
+        transition: 0.5s ease;
+        opacity: 0;
+        margin: 0;
+        padding: 0.5em;
+        font-size: 1.3em;
+        border: solid 1px var(--pink);
+        text-decoration: none;
+        color: var(--pink);
+        cursor: pointer;
+    }
+
+}
+
+.project:hover .project--image{
+    filter: blur(2px) brightness(110%);
+}
+
+.project:hover .project--title{
+    opacity: 1;
+}
+
+.project:hover .project--description{
+    opacity: 1;
+}
+
+.project:hover .project--link{
+    opacity: 1;
+}
+
+.project--link:hover {
+    background-color:var(--aquablue);
+    color: white;
+    border: none;
+}

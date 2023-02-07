@@ -1,0 +1,31 @@
+.mail {
+    position: fixed;
+    bottom: 7rem;
+    right: 1rem;
+    width: 5rem;
+    padding: 10rem 0rem;
+    border-radius: 3rem;
+    z-index: 1;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideup 1s ease 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    z-index: 2;
+
+    &--container {
+        transform: rotate(90deg);
+        color: white;
+        font-size: 1.4rem;
+
+        &:hover {
+            color: var(--aquablue);
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+    }
+
+}
+

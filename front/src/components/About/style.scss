@@ -1,0 +1,50 @@
+.about {
+    position: relative;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 5%;
+
+    &--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        padding: 0 0 0 15%;
+        gap: 2rem;
+    }
+    
+    &--title {
+        font-size: 3rem;
+        color: var(--aquablue);
+        opacity: 0;
+    }
+
+    &--paragraph {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        width: 45rem;
+        opacity: 0;       
+    }
+
+    &--profil {
+        width: 20rem;
+        height: 20rem;
+        z-index: 1;
+        border: 5px solid var(--aquablue);
+        opacity: 0;
+
+    }
+
+    &--motif {
+        position: absolute;
+        width: 70rem;
+        top: 0rem;
+        right: 0rem;
+        opacity: 0.5;
+    }
+
+}
+
+
+
