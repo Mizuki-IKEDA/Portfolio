@@ -16,8 +16,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProjectsAsync());
-  },[dispatch]); 
-  console.log(projects);
+  }); 
   
   const dot = useRef(null);
   const dotOutline = useRef(null);
