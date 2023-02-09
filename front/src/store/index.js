@@ -1,5 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import projectReducer from '../reducers/projectReducer';
 
-export default configureStore({
-    reducer: {},
+const store = configureStore({
+    reducer: {
+        projectReducer,
+    },
 });
+
+export default store;

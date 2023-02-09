@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getProjectsAsync } from "../../reducers/projectReducer";
 import About from '../About';
 import Contact from '../Contact';
 import Home from '../Home';
@@ -9,6 +11,12 @@ import ProLinks from "../ProLinks";
 import './style.css';
 
 function App() {
+
+  const projects = useSelector((state) => state.projects);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProjectsAsync());
+  }); 
   
   const dot = useRef(null);
   const dotOutline = useRef(null);
@@ -112,7 +120,7 @@ function App() {
         <Mail />
         <Home />
         <About />
-        <Projects />
+        <Projects projects={projects} />
         <Contact />
     </div>
   );
