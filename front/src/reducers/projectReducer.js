@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-const API_URL = 'http://localhost:3001/projects';
 
 const initialState = {
     projects:[],
@@ -17,8 +16,8 @@ export const projectSlice = createSlice({
 });
 
 const api = axios.create({
-    baseURL: "http://localhost:3001/",
-    withCredentials: false,
+    baseURL: "http://localhost:3001",
+    withCredentials: true,
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -31,7 +30,7 @@ export function getProjectsAsync() {
         api
             .get("/projects")
             .then((response) => {
-                dispatch(getProjects(response.data))
+                dispatch(getProjects(response.data));
             })
             .catch((error) => {
                 throw new Error(error);
