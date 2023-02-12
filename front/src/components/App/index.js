@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProjectsAsync } from "../../reducers/projectReducer";
+import { useSelector, useDispatch } from "react-redux";
+import { selectProjects, getProjectsError, getProjectsStatus, fetchProjects} from "../../reducers/projectReducer";
 import About from '../About';
 import Contact from '../Contact';
 import Home from '../Home';
@@ -11,12 +11,16 @@ import ProLinks from "../ProLinks";
 import './style.css';
 
 function App() {
-
-  const projects = useSelector((state) => state.projects);
   const dispatch = useDispatch();
+  const projects = useSelector(selectProjects);
+  const projectsStatus = useSelector(getProjectsStatus);
+  const error = useSelector(getProjectsError);
+  
   useEffect(() => {
-    dispatch(getProjectsAsync());
-  }); 
+    if (projectsStatus === 'idle') {
+      dispatch(fetchProjects())
+    }
+  }, [projectsStatus, dispatch]);
   
   const dot = useRef(null);
   const dotOutline = useRef(null);
@@ -127,3 +131,5 @@ function App() {
 }
 
 export default App;
+
+// projects={projects} 
