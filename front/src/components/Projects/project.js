@@ -10,6 +10,7 @@ function Project({
     technology,
     link,
 }) {
+    console.log('helloooo');
     const [show, setShow] = useState(false);
     return (
         <div className="project">
