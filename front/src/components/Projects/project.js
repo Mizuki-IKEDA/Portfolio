@@ -9,19 +9,20 @@ function Project({
     description,
     technology,
     link,
+    done,
 }) {
     const [show, setShow] = useState(false);
     return (
         <div className="project">
             <img src={thumbnail} className="project--image" alt={title} />
-            <div className="project--container">
-                <h3 className="project--title">{title}</h3>
-                <p className="project--description">
-                    {technology}
-                </p>
-                <span onClick={() => setShow(true)} className="project--link">Learn more</span>
-            </div>
-            <Modal onClose={() => setShow(false)} show={show} title={title} subtitle={subtitle} description={description} link={link} thumbnail={thumbnail} />
+                <div className="project--container">
+                    <h3 className="project--title">{title}</h3>
+                    <p className="project--description">
+                        {technology}
+                    </p>
+                    <span onClick={() => setShow(true)} className="project--link">Learn more</span>
+                </div>
+                <Modal onClose={() => setShow(false)} show={show} title={title} subtitle={subtitle} description={description} link={link} thumbnail={thumbnail} done={done} />
         </div>
     )
 }
@@ -33,6 +34,7 @@ Project.propTypes = {
     description: PropTypes.string.isRequired,
     technology: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
+    done: PropTypes.bool.isRequired,
 };
 
 export default Project;
