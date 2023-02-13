@@ -10,7 +10,6 @@ function Project({
     technology,
     link,
 }) {
-    console.log('helloooo');
     const [show, setShow] = useState(false);
     return (
         <div className="project">
@@ -22,7 +21,7 @@ function Project({
                 </p>
                 <span onClick={() => setShow(true)} className="project--link">Learn more</span>
             </div>
-            <Modal onClose={() => setShow(false)} show={show} title={title} subtitle={subtitle} description={description} link={link} />
+            <Modal onClose={() => setShow(false)} show={show} title={title} subtitle={subtitle} description={description} link={link} thumbnail={thumbnail} />
         </div>
     )
 }

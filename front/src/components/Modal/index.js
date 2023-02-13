@@ -8,6 +8,7 @@ function Modal({
     subtitle,
     description,
     link,
+    thumbnail
 }) {
     if (!show) {
         return null
@@ -15,7 +16,7 @@ function Modal({
     return (
         <div className="modal" onClick={onClose}>
             <div className="modal--container" onClick={event => event.stopPropagation()}>
-                <img src="/images/photo_keepup.svg" className="modal--image" alt="keepup" />
+                <img src={thumbnail} className="modal--image" alt={title}/>
                 <div className="modal--text">
                     <h3 className="modal--title">{title}</h3>
                     <h4 className="modal--subtitle">{subtitle}</h4>
@@ -39,6 +40,7 @@ Modal.propTypes = {
     subtitle: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string.isRequired,
 };
 
 export default Modal;
