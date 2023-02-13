@@ -8,7 +8,8 @@ function Modal({
     subtitle,
     description,
     link,
-    thumbnail
+    thumbnail,
+    done
 }) {
     if (!show) {
         return null
@@ -23,9 +24,12 @@ function Modal({
                     <p className="modal--description">{description}</p>
                 </div>
                 <div className="modal--footer">
-                    <a className="modal--link-container" href={link}  target="_blank">
-                        <div className="modal--link">Go to Website</div>
-                    </a>
+                    {done && 
+                        <a className="modal--link-container" href={link}  target="_blank">
+                            <div className="modal--link">Go to Website</div>
+                        </a>
+                    }
+                    {!done && <div className="modal--nolink">Link Coming Soon !</div>}
                     <span onClick={onClose} className="modal--close">&times;</span>
                 </div>
             </div>
@@ -41,6 +45,7 @@ Modal.propTypes = {
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,
+    done: PropTypes.bool.isRequired,
 };
 
 export default Modal;
