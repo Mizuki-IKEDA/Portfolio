@@ -16,12 +16,7 @@ function Projects({ projects }) {
                         {projects.map((project) => (
                             <Project
                                 key={project.id}
-                                thumbnail={project.thumbnail}
-                                title={project.title}
-                                subtitle={project.subtitle}
-                                description={project.description}
-                                technology={project.technology}
-                                link={project.link}
+                                {...project}
                             />
                         ))}
                     </section>
