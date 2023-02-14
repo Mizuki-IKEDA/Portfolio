@@ -6,15 +6,17 @@
         "subtitle": "A networking app for sports lovers",
         "description": "Keep’Up is a mobile-first social networking application allowing sports lovers to connect with each other. The user will be able to create sports events or join available ones created by other users to practice together.",
         "technology": "ReactJS / Node",
-        "link": "https://keepup-oclock.netlify.app/"
+        "link": "https://keepup-oclock.netlify.app/",
+        "done": true
     },
     {
         "id": 2,
-        "thumbnail": "/",
+        "thumbnail": "/images/BugTracker_Minko.jpg",
         "title": "Bug Traker Minko",
         "subtitle": "A bug tracking app",
         "description": "Bug Tracker Minko is a bug tracking app that is awesome.",
         "technology": "ReactJS / Node",
-        "link": "/"
+        "link": "/",
+        "done": false
     }
 ]

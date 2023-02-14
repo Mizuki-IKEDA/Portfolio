@@ -31,7 +31,7 @@
         width: 20rem;
         height: 20rem;
         z-index: 1;
-        border: 5px solid var(--aquablue);
+        box-shadow: 0.5rem 0.5rem var(--aquablue), -0.5rem -0.5rem var(--pink);
         opacity: 0;
 
     }
