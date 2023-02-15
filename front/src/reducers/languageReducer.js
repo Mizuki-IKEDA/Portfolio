@@ -9,16 +9,16 @@ export const languageSlice = createSlice({
     initialState,
     reducers: {
       toggleLanguage: (state) => {
-        if (state.language = 'en') {
+        if (state.language === 'en') {
             state.language = 'fr'
-        } else if (state.language = 'fr') {
+        } else if (state.language === 'fr') {
             state.language = 'en'
         }
       },
     },
   })
   
-  // Action creators are generated for each case reducer function
-  export const { toggleLanguage } = languageSlice.actions;
-  
-  export default languageSlice.reducer;
+
+export const { toggleLanguage } = languageSlice.actions;
+
+export default languageSlice.reducer;

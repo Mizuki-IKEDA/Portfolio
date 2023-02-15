@@ -1,9 +1,12 @@
 import './style.scss';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
+import { toggleLanguage } from '../../reducers/languageReducer';
+import { useDispatch } from 'react-redux';
 
 function Menu({language}) {
     console.log(language);
+    const dispatch = useDispatch();
     return (
         <nav className="menu">
             <div className="menu-home">
@@ -32,10 +35,10 @@ function Menu({language}) {
                 </li>
             </ul>
             <div className='menu-languages'>
-                <Link className={language==='en' ? 'menu-language menu-language--chosen' : 'menu-language'}>
+                <Link onClick={() => dispatch(toggleLanguage())} className={language==='en' ? 'menu-language menu-language--chosen' : 'menu-language'}>
                     EN
                 </Link>
-                <Link className={language==='fr' ? 'menu-language menu-language--chosen' : 'menu-language'}>
+                <Link onClick={() => dispatch(toggleLanguage())} className={language==='fr' ? 'menu-language menu-language--chosen' : 'menu-language'}>
                     FR
                 </Link>
             </div>
