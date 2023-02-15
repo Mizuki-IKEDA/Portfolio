@@ -131,7 +131,7 @@ function App() {
           <Menu language={language} />
           <ProLinks />
           <Mail />
-          <Home />
+          <Home language={language} />
           <About />
           <Projects projects={projects} />
           <Contact />

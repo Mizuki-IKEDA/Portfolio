@@ -5,7 +5,6 @@ import { toggleLanguage } from '../../reducers/languageReducer';
 import { useDispatch } from 'react-redux';
 
 function Menu({language}) {
-    console.log(language);
     const dispatch = useDispatch();
     return (
         <nav className="menu">
