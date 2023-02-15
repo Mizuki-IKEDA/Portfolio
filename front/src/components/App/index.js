@@ -133,8 +133,8 @@ function App() {
           <Mail />
           <Home language={language} />
           <About language={language}  />
-          <Projects projects={projects} />
-          <Contact />
+          <Projects projects={projects} language={language} />
+          <Contact language={language} />
         </div>
   );
 }

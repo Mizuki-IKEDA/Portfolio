@@ -10,6 +10,7 @@ function Project({
     technology,
     link,
     done,
+    language
 }) {
     const [show, setShow] = useState(false);
     return (
@@ -20,9 +21,9 @@ function Project({
                     <p className="project--description">
                         {technology}
                     </p>
-                    <span onClick={() => setShow(true)} className="project--link">Learn more</span>
+                    <span onClick={() => setShow(true)} className="project--link">{language === 'en' ? 'Learn more' : 'Détails'}</span>
                 </div>
-                <Modal onClose={() => setShow(false)} show={show} title={title} subtitle={subtitle} description={description} link={link} thumbnail={thumbnail} done={done} />
+                <Modal onClose={() => setShow(false)} show={show} title={title} subtitle={subtitle} description={description} link={link} thumbnail={thumbnail} done={done} language={language} />
         </div>
     )
 }
@@ -35,6 +36,7 @@ Project.propTypes = {
     technology: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     done: PropTypes.bool.isRequired,
+    language: PropTypes.string.isRequired,
 };
 
 export default Project;

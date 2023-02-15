@@ -6,7 +6,6 @@ function About({language}) {
     const { ref: aboutRef, inView: aboutIsVisible } = useInView({
         triggerOnce: true,
     });
-    console.log(language);
     return (
         <div className="about" id="about">
             {language === 'en' ? 
