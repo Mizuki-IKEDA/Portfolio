@@ -35,7 +35,7 @@ function Home({language}) {
                             <span className="home--discover">Contactez moi</span>
                         </Link>
                         <Link activeClass="active" duration={400} smooth={true} spy={true} to="contact">
-                            <span className="home--cv">CV</span>
+                            <span className="home--cv">Mon CV</span>
                         </Link>
                     </div>
                     <Link activeClass="active" duration={400} smooth={true} spy={true} to="about">

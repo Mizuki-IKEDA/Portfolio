@@ -132,7 +132,7 @@ function App() {
           <ProLinks />
           <Mail />
           <Home language={language} />
-          <About />
+          <About language={language}  />
           <Projects projects={projects} />
           <Contact />
         </div>
