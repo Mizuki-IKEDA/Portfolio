@@ -3,7 +3,7 @@ import Project from './project';
 import './style.scss';
 import PropTypes from 'prop-types';
 
-function Projects({ projects }) {
+function Projects({ projects, language }) {
     const { ref: projectsRef, inView: projectsIsVisible } = useInView({
         triggerOnce: true,
     });
@@ -17,6 +17,7 @@ function Projects({ projects }) {
                             <Project
                                 key={project.id}
                                 {...project}
+                                language={language}
                             />
                         ))}
                     </section>
@@ -29,6 +30,7 @@ function Projects({ projects }) {
 
 Projects.propTypes = {
     projects: PropTypes.array,
+    language: PropTypes.string.isRequired,
 };
 
 

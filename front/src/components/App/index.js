@@ -5,12 +5,15 @@ import About from '../About';
 import Contact from '../Contact';
 import Home from '../Home';
 import Mail from "../Mail";
+import MenuEn from "../Menu";
 import Menu from '../Menu';
 import Projects from '../Projects';
 import ProLinks from "../ProLinks";
 import './style.css';
 
 function App() {
+
+  // Fetching projects
   const dispatch = useDispatch();
   const projects = useSelector(selectProjects);
   const projectsStatus = useSelector(getProjectsStatus);
@@ -21,7 +24,13 @@ function App() {
       dispatch(fetchProjects())
     }
   }, [projectsStatus, dispatch]);
-  
+
+  // Language options
+  const language = useSelector((state) => state.language.language);
+  console.log(language);
+
+
+  // Mouse shape
   const dot = useRef(null);
   const dotOutline = useRef(null);
 
@@ -116,17 +125,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-        <div ref={dotOutline} className="cursor-dot-outline"></div>
-        <div ref={dot} className="cursor-dot"></div>
-        <Menu />
-        <ProLinks />
-        <Mail />
-        <Home />
-        <About />
-        <Projects projects={projects} />
-        <Contact />
-    </div>
+        <div className="App">
+          <div ref={dotOutline} className="cursor-dot-outline"></div>
+          <div ref={dot} className="cursor-dot"></div>
+          <Menu language={language} />
+          <ProLinks />
+          <Mail />
+          <Home language={language} />
+          <About language={language}  />
+          <Projects projects={projects} language={language} />
+          <Contact language={language} />
+        </div>
   );
 }
 

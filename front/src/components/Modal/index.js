@@ -9,7 +9,8 @@ function Modal({
     description,
     link,
     thumbnail,
-    done
+    done,
+    language
 }) {
     if (!show) {
         return null
@@ -26,10 +27,10 @@ function Modal({
                 <div className="modal--footer">
                     {done && 
                         <a className="modal--link-container" href={link}  target="_blank">
-                            <div className="modal--link">Go to Website</div>
+                            <div className="modal--link">{language === 'en' ? 'Go to Website' : 'Aller sur le site'}</div>
                         </a>
                     }
-                    {!done && <div className="modal--nolink">Link Coming Soon !</div>}
+                    {!done && <div className="modal--nolink">{language === 'en' ? 'Link Coming Soon !' : 'Site bientôt disponible'}</div>}
                     <span onClick={onClose} className="modal--close">&times;</span>
                 </div>
             </div>
@@ -46,6 +47,7 @@ Modal.propTypes = {
     link: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,
     done: PropTypes.bool.isRequired,
+    language: PropTypes.string.isRequired,
 };
 
 export default Modal;
