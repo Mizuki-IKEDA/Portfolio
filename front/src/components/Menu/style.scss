@@ -91,5 +91,18 @@
         font-size: 1.7rem;
         z-index: 2;
     }
+    
+    &-language {
+        font-weight: bold;
+
+        &:hover {
+            color: var(--aquablue);
+            cursor: pointer;
+        }
+
+        &--chosen {
+            color: var(--aquablue);
+        }
+    }
 
 }

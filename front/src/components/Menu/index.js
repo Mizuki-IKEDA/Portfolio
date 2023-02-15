@@ -1,7 +1,9 @@
 import './style.scss';
+import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
 
-function Menu() {
+function Menu({language}) {
+    console.log(language);
     return (
         <nav className="menu">
             <div className="menu-home">
@@ -10,17 +12,17 @@ function Menu() {
             <ul className='menu-links'>
                 <li>
                     <Link className="menu-link" activeClass="active" duration={400} smooth={true} spy={true} to="home">
-                        Home
+                        {language === 'en' ? 'Home' : 'Accueil'}
                     </Link>
                 </li>
                 <li>
                     <Link className="menu-link" activeClass="active" duration={400} smooth={true} spy={true} to="about">
-                        About
+                        {language === 'en' ? 'About' : 'A propos'}
                     </Link>
                 </li>
                 <li>
                     <Link className="menu-link" activeClass="active" duration={400} smooth={true} spy={true} to="projects">
-                        Projects
+                        {language === 'en' ? 'Projects' : 'Projets'}
                     </Link>
                 </li>
                 <li >
@@ -30,15 +32,20 @@ function Menu() {
                 </li>
             </ul>
             <div className='menu-languages'>
-                <Link className="menu-language">
-                    FR
-                </Link>
-                <Link className="menu-language">
+                <Link className={language==='en' ? 'menu-language menu-language--chosen' : 'menu-language'}>
                     EN
+                </Link>
+                <Link className={language==='fr' ? 'menu-language menu-language--chosen' : 'menu-language'}>
+                    FR
                 </Link>
             </div>
         </nav>
     )
 }
+
+Menu.propTypes = {
+    language: PropTypes.string.isRequired,
+};
+
 
 export default Menu;
