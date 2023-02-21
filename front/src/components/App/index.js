@@ -9,7 +9,7 @@ import MenuEn from "../Menu";
 import Menu from '../Menu';
 import Projects from '../Projects';
 import ProLinks from "../ProLinks";
-import './style.css';
+import './style.scss';
 
 function App() {
 
@@ -131,10 +131,12 @@ function App() {
           <Menu language={language} />
           <ProLinks />
           <Mail />
-          <Home language={language} />
-          <About language={language}  />
-          <Projects projects={projects} language={language} />
-          <Contact language={language} />
+          <div className="app--snap">
+              <Home className="app--snap-element" language={language} />
+              <About className="app--snap-element" language={language} />
+              <Projects className="app--snap-element" projects={projects} language={language} />
+              <Contact className="app--snap-element" language={language} />
+          </div>
         </div>
   );
 }

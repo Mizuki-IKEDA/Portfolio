@@ -16,9 +16,7 @@ function Home({language}) {
                         <Link activeClass="active" duration={400} smooth={true} spy={true} to="contact">
                             <span className="home--discover">Contact me</span>
                         </Link>
-                        <Link activeClass="active" duration={400} smooth={true} spy={true} to="contact">
-                            <span className="home--cv">Resume</span>
-                        </Link>
+                        <a href="/documents/CV_Mizuki_IKEDA_en.pdf" className="home--cv" target="_blank">Resume</a>
                     </div>
                     <Link activeClass="active" duration={400} smooth={true} spy={true} to="about">
                         <img className="home--downarrow" src="/images/down_arrow_3.png" alt="down_arrow" />
@@ -34,9 +32,7 @@ function Home({language}) {
                         <Link activeClass="active" duration={400} smooth={true} spy={true} to="contact">
                             <span className="home--discover">Contactez moi</span>
                         </Link>
-                        <Link activeClass="active" duration={400} smooth={true} spy={true} to="contact">
-                            <span className="home--cv">Mon CV</span>
-                        </Link>
+                        <a href="/documents/CV_Mizuki_IKEDA_en.pdf" className="home--cv" target="_blank">Mon CV</a>
                     </div>
                     <Link activeClass="active" duration={400} smooth={true} spy={true} to="about">
                         <img className="home--downarrow" src="/images/down_arrow_3.png" alt="down_arrow" />
