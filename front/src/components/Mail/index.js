@@ -3,9 +3,9 @@ import './style.scss';
 function Mail() {
   return (
     <div className="mail">
-        <div className="mail--container">
+        <a href="mailto:" className="mail--container">
             mizukikeda@gmail.com
-        </div>
+        </a>
     </div>
   )
 }
