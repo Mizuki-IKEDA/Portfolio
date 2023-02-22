@@ -27,8 +27,6 @@ function App() {
 
   // Language options
   const language = useSelector((state) => state.language.language);
-  console.log(language);
-
 
   // Mouse shape
   const dot = useRef(null);
