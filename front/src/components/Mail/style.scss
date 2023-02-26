@@ -14,8 +14,9 @@
     animation-fill-mode: forwards;
     opacity: 0;
     z-index: 2;
-
+    
     &--container {
+        text-decoration: none;
         transform: rotate(90deg);
         color: white;
         font-size: 1.4rem;
