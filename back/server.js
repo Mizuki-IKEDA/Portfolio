@@ -36,9 +36,9 @@ function contactEmail( {name, email, message} ) {
     });
 
     const mail_configs = {
-      from: process.env.EMAIL_SENDER,
-      to: email,
-      subject: name,
+      from: email,
+      to: process.env.EMAIL_SENDER,
+      subject: `Message from ${name} with ${email}`,
       text: message,
     };
 
