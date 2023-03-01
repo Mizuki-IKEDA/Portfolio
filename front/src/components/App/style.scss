@@ -1,31 +1,31 @@
-* {
-    cursor: none;
-}
+// * {
+//     cursor: none;
+// }
 
-.cursor-dot,
-.cursor-dot-outline {
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    z-index: 5;
-}
+// .cursor-dot,
+// .cursor-dot-outline {
+//     pointer-events: none;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     border-radius: 50%;
+//     opacity: 1;
+//     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+//     z-index: 5;
+// }
 
-.cursor-dot {
-    width: 20px;
-    height: 20px;
-    background-color: rgba(255, 3, 108, 0.6);
-}
+// .cursor-dot {
+//     width: 20px;
+//     height: 20px;
+//     background-color: rgba(255, 3, 108, 0.6);
+// }
 
-.cursor-dot-outline {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(230, 98, 188, 0.3);
-}
+// .cursor-dot-outline {
+//     width: 40px;
+//     height: 40px;
+//     background-color: rgba(230, 98, 188, 0.3);
+// }
 
 // .app--snap {
 //     scroll-snap-type: y mandatory

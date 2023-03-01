@@ -33,11 +33,11 @@ function Contact({language}) {
         <div className="contact" id="contact">
             {language === 'en' ? 
             <div className="contact--container">
-                <h1 ref={contactRef} className={`${'contact--title'} ${contactIsVisible ? 'animateSlideRight' : ''}`}>Contact</h1>
-                <p ref={contactRef} className={`${'contact--description'} ${contactIsVisible ? 'animateSlideRightDelay' : ''}`}>
+                <h1 ref={contactRef} className={`${'contact--title'} ${contactIsVisible ? 'animateFadein' : ''}`}>Contact</h1>
+                <p ref={contactRef} className={`${'contact--description'} ${contactIsVisible ? 'animateFadein' : ''}`}>
                     Whether you have a question or just want to say hi, don't hesitate to contact me !
                 </p>
-                <div ref={contactRef} className={`${'contact--form-container'} ${contactIsVisible ? 'animateSlideLeft' : ''}`}>
+                <div ref={contactRef} className={`${'contact--form-container'} ${contactIsVisible ? 'animateFadeinDelay' : ''}`}>
                     <form className="contact--form" onSubmit={handleSubmit}>
                         <label htmlFor="name" className="contact--form-label">Name</label>
                         <input

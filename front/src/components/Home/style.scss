@@ -19,8 +19,7 @@
         font-size: 3rem;
         
         &-hi {
-            margin-left: -100%;
-            animation: animate-slide-right 1.5s ease;
+            animation: animate-fadein 1.5s ease;
             animation-fill-mode: forwards;
             opacity: 0;
         }
@@ -29,14 +28,8 @@
             color: var(--aquablue);
         }
 
-        &-dev {
-            margin-left: 100%;
-            animation: animate-slide-left 1.5s ease;
-            animation-fill-mode: both;
-            opacity: 0;
-        }
     }
-
+    
     &--paragraph {
         font-size: 1.5rem;
         width: 70%;
@@ -45,8 +38,13 @@
         animation-delay: 0.7s;
         animation-fill-mode: forwards;
         opacity: 0;
-    }
 
+        &-dev {
+            color: var(--aquablue);
+            font-weight: bold;
+        }
+    }
+    
     &--links {
         display: flex;
         align-items: center;

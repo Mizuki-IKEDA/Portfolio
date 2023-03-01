@@ -8,10 +8,14 @@ function Home({language}) {
             {language === 'en' ? 
                 <div className="home--container">
                     <h1 className='home--title'>
-                        <span className="home--title-hi">Hi! I'm <span className="home--title-name">Mizuki</span> | </span>
-                        <span className="home--title-dev">Web developer</span>
+                        <span className="home--title-hi">
+                            Hi, my name is <span className="home--title-name">Mizuki</span>
+                        </span>
+                        {/* <span className="home--title-dev">Web developer</span> */}
                     </h1>
-                    <p className='home--paragraph'>I'm a fullstack developer specialized in React.<br></br>I love building neat interfaces, web apps and everything in between !</p>
+                    <p className='home--paragraph'>
+                        I'm a <span className='home--paragraph-dev' >fullstack developer specialized in React.</span><br></br>I love building neat interfaces, web apps and everything in between
+                    </p>
                     <div className="home--links" >
                         <Link activeClass="active" duration={400} smooth={true} spy={true} to="contact">
                             <span className="home--discover">Contact me</span>
