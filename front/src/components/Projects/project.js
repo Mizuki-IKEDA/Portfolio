@@ -16,14 +16,14 @@ function Project({
     return (
         <div className="project">
             <img src={thumbnail} className="project--image" alt={title} />
-                <div className="project--container">
-                    <h3 className="project--title">{title}</h3>
-                    <p className="project--description">
-                        {technology}
-                    </p>
-                    <span onClick={() => setShow(true)} className="project--link">{language === 'en' ? 'Learn more' : 'Détails'}</span>
-                </div>
-                <Modal onClose={() => setShow(false)} show={show} title={title} subtitle={subtitle} description={description} link={link} thumbnail={thumbnail} done={done} language={language} />
+            <div className="project--container">
+                <h3 className="project--title">{title}</h3>
+                <p className="project--description">
+                    {technology}
+                </p>
+                <span onClick={() => setShow(true)} className="project--link">{language === 'en' ? 'Learn more' : 'Détails'}</span>
+            </div>
+            <Modal onClose={() => setShow(false)} show={show} title={title} subtitle={subtitle} description={description} link={link} thumbnail={thumbnail} done={done} language={language} />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 .prolinks {
-    background-color: var(--dark);
+    background-color: var(--aquablue);
     position: fixed;
     bottom: 7rem;
     left: 1.9rem;
@@ -23,10 +23,10 @@
     &--logo {
         cursor: pointer;
         width: 30px;
-        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(317deg) brightness(109%) contrast(107%);
+        filter: invert(100%) sepia(2%) saturate(94%) hue-rotate(217deg) brightness(116%) contrast(100%);
 
         &:hover {
-            filter: invert(68%) sepia(78%) saturate(4749%) hue-rotate(146deg) brightness(104%) contrast(97%);
+            filter: invert(13%) sepia(26%) saturate(2051%) hue-rotate(164deg) brightness(92%) contrast(98%);
             transition: 0.5s ease;
         }
     }

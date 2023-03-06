@@ -1,19 +1,22 @@
 .menu {
     position: fixed;
-    display: flex;
-    width: 96%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em 2.5em;
+    width: 100%;
     z-index: 2;
     background-color: var(--dark);
     animation: slidedown 1s ease;
-
+    
+    &--container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em 2.5em;
+    }
     
     &-square {
         width: 40px;
         height: 40px;
         border: 2px solid var(--aquablue);
+        border-radius: 5px;
         position: absolute;
         left: 1.9rem;
         top: 1.5rem;
@@ -37,12 +40,12 @@
     &-links {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 4rem;
         z-index: 2;
     }
 
     &-link {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-weight: bold;
         color:#ffffff;
         text-decoration: none;
