@@ -23,7 +23,7 @@ function Projects({ projects, language }) {
                     </section>
                 )}
             </div>
-            <img className="projects--motif" src="/images/gggyrate.svg" alt="motif" />
+            {/* <img className="projects--motif" src="/images/gggyrate.svg" alt="motif" /> */}
         </div>
     )
 }

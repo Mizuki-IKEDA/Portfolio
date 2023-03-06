@@ -34,28 +34,28 @@ function Contact({language}) {
             {language === 'en' ? 
             <div className="contact--container">
                 <h1 ref={contactRef} className={`${'contact--title'} ${contactIsVisible ? 'animateFadein' : ''}`}>Contact</h1>
-                <p ref={contactRef} className={`${'contact--description'} ${contactIsVisible ? 'animateFadein' : ''}`}>
-                    Whether you have a question or just want to say hi, don't hesitate to contact me !
-                </p>
                 <div ref={contactRef} className={`${'contact--form-container'} ${contactIsVisible ? 'animateFadeinDelay' : ''}`}>
+                    <p ref={contactRef} className={`${'contact--description'} ${contactIsVisible ? 'animateFadein' : ''}`}>
+                        Whether you have a question or just want to say hi, don't hesitate to contact me !
+                    </p>
                     <form className="contact--form" onSubmit={handleSubmit}>
-                        <label htmlFor="name" className="contact--form-label">Name</label>
                         <input
                             type="text"
                             id="name"
+                            placeholder="Name"
                             onChange={(event) => setName(event.target.value)}
                             className="contact--form-input"
                         />
-                        <label htmlFor="email" className="contact--form-label">E-mail</label>
                         <input
                             type="email"
                             id="email"
+                            placeholder="E-mail"
                             onChange={(event) => setEmail(event.target.value)}
                             className="contact--form-input"
                         />
-                        <label htmlFor="message"className="contact--form-label">Message</label>
                         <textarea
                             id="message"
+                            placeholder="Type your message here..."
                             rows="5"
                             onChange={(event) => setMessage(event.target.value)}
                             className="contact--form-textarea"
@@ -69,22 +69,41 @@ function Contact({language}) {
                 </div>
             </div> :
             <div className="contact--container">
-                <h1 ref={contactRef} className={`${'contact--title'} ${contactIsVisible ? 'animateSlideRight' : ''}`}>Contact</h1>
-                <p ref={contactRef} className={`${'contact--description'} ${contactIsVisible ? 'animateSlideRightDelay' : ''}`}>
-                    N'hésitez pas à me contacter !
-                </p>
-                <div ref={contactRef} className={`${'contact--form-container'} ${contactIsVisible ? 'animateSlideLeft' : ''}`}>
+                <h1 ref={contactRef} className={`${'contact--title'} ${contactIsVisible ? 'animateFadein' : ''}`}>Contact</h1>
+                <div ref={contactRef} className={`${'contact--form-container'} ${contactIsVisible ? 'animateFadeinDelay' : ''}`}>
+                    <p ref={contactRef} className={`${'contact--description'} ${contactIsVisible ? 'animateFadein' : ''}`}>
+                        N'hésitez pas à me contacter !
+                    </p>
                     <form className="contact--form" onSubmit={handleSubmit}>
-                        <label htmlFor="name" className="contact--form-label">Nom</label>
-                        <input className="contact--form-input" />
-                        <label className="contact--form-label">E-mail</label>
-                        <input className="contact--form-input" />
-                        <label className="contact--form-label">Message</label>
-                        <textarea className="contact--form-textarea" rows="5"></textarea>
-                        <button className="contact--form-submit" type="submit">ENVOI</button>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Name"
+                            onChange={(event) => setName(event.target.value)}
+                            className="contact--form-input"
+                        />
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="E-mail"
+                            onChange={(event) => setEmail(event.target.value)}
+                            className="contact--form-input"
+                        />
+                        <textarea
+                            id="message"
+                            placeholder="Type your message here..."
+                            rows="5"
+                            onChange={(event) => setMessage(event.target.value)}
+                            className="contact--form-textarea"
+                        ></textarea>
+                        <div>
+                            <button className="contact--form-submit" type="submit">
+                                ENVOI
+                            </button>
+                        </div>
                     </form>
                 </div>
-            </div>
+        </div>
             }
         </div>
     )

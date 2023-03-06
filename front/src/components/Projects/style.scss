@@ -1,15 +1,19 @@
 .projects {
+    position: relative;
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    height: 100vh;
+    background-color: var(--dark);
     
     &--container {
         padding: 0 15%;
         display: flex;
         flex-direction: column;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 2rem;
     }
 
@@ -31,11 +35,11 @@
 
     &--motif {
         position: absolute;
-        width: 70rem;
+        height: 100vh;
+        width: 100%;
         top: 0rem;
-        left: 0rem;
+        right: 0rem;
         opacity: 0.5;
-
     }
 
 
@@ -47,8 +51,8 @@
     opacity: 1;
     transition: .5s ease;
     backface-visibility: hidden;
-    width: 38rem;
-    height: 20.6rem;
+    width: 26rem;
+    height: 14rem;
     
     &--image {
         width: 100%;

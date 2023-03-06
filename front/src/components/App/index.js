@@ -123,18 +123,16 @@ function App() {
   // }, []);
 
   return (
-        <div className="App">
+        <div className="app">
           {/* <div ref={dotOutline} className="cursor-dot-outline"></div>
           <div ref={dot} className="cursor-dot"></div> */}
           <Menu language={language} />
           <ProLinks />
           <Mail />
-          <div className="app--snap">
-              <Home className="app--snap-element" language={language} />
-              <About className="app--snap-element" language={language} />
-              <Projects className="app--snap-element" projects={projects} language={language} />
-              <Contact className="app--snap-element" language={language} />
-          </div>
+          <Home className="app--snap-element" language={language} />
+          <About className="app--snap-element" language={language} />
+          <Projects className="app--snap-element" projects={projects} language={language} />
+          <Contact className="app--snap-element" language={language} />
         </div>
   );
 }
